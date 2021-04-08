@@ -52,6 +52,10 @@ header nav ul a:active {
   color: #000;
 }
 
+.hamburger {
+  display: none;
+}
+
 .main-heading {
   display: flex;
   flex-direction: column;
@@ -527,5 +531,48 @@ header nav ul a:active {
 
   .review {
     width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  .nav-line {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    opacity: 0.9;
+    z-index: 4;
+    width: 100%;
+    position: absolute;
+    /* top: -100%; */
+    z-index: 20;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    transform: translateY(-150%);
+    transition: all 0.8s;
+    filter: blur(0.6px);
+  }
+
+  .nav-line.active {
+    transform: translateY(0%) !important;
+  }
+
+  nav ul .close {
+    animation: close 1s forwards;
+  }
+
+  nav ul li a {
+    font-size: 1.8rem;
+    font-weight: 700;
   }
 }
